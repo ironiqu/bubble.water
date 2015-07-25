@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>bubble</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="water.js"></script>
+  <script src="water.bubble.js"></script>
+  <script>
+   var openU;
+   water.event("load",function(){
+      bubble.openIMG("./load.png", "exam title1");
+      openU = bubble.openURL("./load.html", "exam title3");
+      openU.title("exam title3 edit");
+      openU.setSize(300,500);
+      bubble.loadHTML("./load.html", "exam title2").sizeFixed(true);
+      openU.closeEvent=function(){alert("exam title3は閉じられました。");};
+   });
+  </script>
+ </head>
+ <body>
+    <div id="main">
+       <img src="./img/bubble_200[1].png">
+       <p id="menu">
+          <a target="bubble" href="./loadAjaxHowTo.html" title="大きさ可変バブル">how to use</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a target="bubble[500]" title="500*500のサイズ可変バブル" href="./loadAjax.html">download</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a target="bubble[200,300,fixed]" title="200*300のサイズ固定バブル" href="./loadAjax.html">message</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a target="bubble[600,fixed]" href="http://wikipedia.org">Wikipedia</a></p>
+    </div>
+ </body>
+</html>
